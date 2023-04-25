@@ -30,5 +30,6 @@ const db = mongoClient.db();
 export default db
 
 // Deixa o app escutando, à espera de requisições
-const PORT = 5000
-app.listen(PORT, () => console.log(`Servidor rodando na porta ${PORT}`))
+app.listen(process.env.PORT, () => {
+    console.log("Server running on port " + process.env.PORT);
+});
